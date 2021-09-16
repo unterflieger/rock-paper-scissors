@@ -13,7 +13,7 @@ def choice():
     if pchoice == ('1') or pchoice == ('2') or pchoice == ('3'):
         comchoice = (random.randint(int(1),int(3)))
         #comchoice = str(comchoice)
-        if pchoice is comchoice:
+        if pchoice == str(comchoice):
             print('Tie!\nYou: ' + pchoice + '\nCOM: ' + str(comchoice))
             input('Press any button to continue.')
         elif pchoice is ('1') and comchoice is (2):
@@ -36,6 +36,7 @@ def choice():
             input('Press any button to continue.')
         else:
             print('Something has gone wrong.')
+            print('Debug:\nYou: ' + pchoice + '\nCOM: ' + str(comchoice))
             input('Press any button.')
     else:
         print('Invalid Input!')
