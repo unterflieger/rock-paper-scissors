@@ -7,33 +7,35 @@ comchoice = ''
 def cls():
     _ = system('cls')
 
+def win(): # define win script
+    print('You won!\nYou: ' + pchoice + '\nCOM: ' + str(comchoice))
+    input('Press any button to continue.')
+
+def lose(): # define lose script
+    print('You lost!\nYou: ' + pchoice + '\nCOM: ' + str(comchoice))
+    input('Press any button to continue.')  
+
 def choice():
     cls()
     pchoice = input('1: Rock\n2: Paper\n3: Scissors\nChoose of of the 3 Options: ')
     if pchoice == ('1') or pchoice == ('2') or pchoice == ('3'):
         comchoice = (random.randint(int(1),int(3)))
-        #comchoice = str(comchoice)
+        #check for invalid input and compare player/com choices
         if pchoice == str(comchoice):
             print('Tie!\nYou: ' + pchoice + '\nCOM: ' + str(comchoice))
             input('Press any button to continue.')
         elif pchoice is ('1') and comchoice is (2):
-            print('You lost!\nYou: ' + pchoice + '\nCOM: ' + str(comchoice))
-            input('Press any button to continue.')        
+            lose()     
         elif pchoice is ('1') and comchoice is (3):
-            print('You won!\nYou: ' + pchoice + '\nCOM: ' + str(comchoice))
-            input('Press any button to continue.')
+            win()
         elif pchoice is ('2') and comchoice is (1):
-            print('You won!\nYou: ' + pchoice + '\nCOM: ' + str(comchoice))
-            input('Press any button to continue.')
+            win()
         elif pchoice is ('2') and comchoice is (3):
-            print('You lost!\nYou: ' + pchoice + '\nCOM: ' + str(comchoice))
-            input('Press any button to continue.')
+            lose()
         elif pchoice is ('3') and comchoice is (1):
-            print('You lost!\nYou: ' + pchoice + '\nCOM: ' + str(comchoice))
-            input('Press any button to continue.')
+            lose()
         elif pchoice is ('3') and comchoice is (2):
-            print('You won!\nYou: ' + pchoice + '\nCOM: ' + str(comchoice))
-            input('Press any button to continue.')
+            win()
         else:
             print('Something has gone wrong.')
             print('Debug:\nYou: ' + pchoice + '\nCOM: ' + str(comchoice))
