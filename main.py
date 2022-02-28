@@ -24,17 +24,17 @@ def choice():
         if pchoice == str(comchoice):
             print('Tie!\nYou: ' + pchoice + '\nCOM: ' + str(comchoice))
             input('Press any button to continue.')
-        elif pchoice is ('1') and comchoice is (2):
+        elif pchoice == ('1') and comchoice is (2):
             lose()     
-        elif pchoice is ('1') and comchoice is (3):
+        elif pchoice == ('1') and comchoice is (3):
             win()
-        elif pchoice is ('2') and comchoice is (1):
+        elif pchoice == ('2') and comchoice is (1):
             win()
-        elif pchoice is ('2') and comchoice is (3):
+        elif pchoice == ('2') and comchoice is (3):
             lose()
-        elif pchoice is ('3') and comchoice is (1):
+        elif pchoice == ('3') and comchoice is (1):
             lose()
-        elif pchoice is ('3') and comchoice is (2):
+        elif pchoice == ('3') and comchoice is (2):
             win()
         else:
             print('Something has gone wrong.')
